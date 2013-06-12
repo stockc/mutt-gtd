@@ -1,7 +1,7 @@
 mutt-gtd
 ========
 
-Little mutt hack to toggle gtd tags via the custom email header field X-Label 
+Little [mutt](http://www.mutt.org) hack to toggle [gtd](http://de.wikipedia.org/wiki/Getting_Things_Done) tags via the custom email header field X-Label 
 
 Motivation and idea:
 --------------------
@@ -31,10 +31,10 @@ macro index <esc>u "<enter-command>set editor=\"~/bin/x-label-toggler urgent\"\n
 macro index <esc>r "<enter-command>set editor=\"~/bin/x-label-toggler review\"\n\
 <edit><next-undeleted>\
 <enter-command>set editor=vim\n" "Toggle label"
-macro index \Cw "<limit>~y waiting\n" "Limit view to label waiting"
-macro index \Ct "<limit>~y todo\n" "Limit view to todo"
-macro index \Cu "<limit>~y urgent\n" "Limit view to urgent"
-macro index \Cr "<limit>~y review\n" "Limit view to review"
+macro index \Cw "<limit>~y waiting\n" "Limit view to tag waiting"
+macro index \Ct "<limit>~y todo\n" "Limit view to tag todo"
+macro index \Cu "<limit>~y urgent\n" "Limit view to tag urgent"
+macro index \Cr "<limit>~y review\n" "Limit view to tag review"
 ```
 
 Enable coloring in mutt:
@@ -54,10 +54,10 @@ Enable display of X-Label:
 set index_format="%4C %Z %{%b %d} %-15.15L %?M?(#%03M)&(%4l)? %?y?(%.20Y) ?%s"
 ```
 
-Trying it out:
---------------
+Try it out:
+-----------
 
-In mutt you can now hit \<esc\>w to mark an email with tag "waiting" and unmark it by hitting \<esc\>w again. To limit your view to emails with tag "waiting" just hit \<ctrl\>w.
+In mutt you hit \<esc\>w to mark an email with the tag "waiting" and unmark it by hitting \<esc\>w again. To limit your view to emails with tag "waiting" just hit \<ctrl\>w. Use u for "urgent", t for "todo" and r for "review".
 
 
 Happy tagging
