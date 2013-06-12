@@ -47,8 +47,8 @@ color index brightred default '~y todo | ~(~y todo)'
 color index brightred default '~y urgent | ~(~y urgent)'
 ```
 
-Enable display of X-Label
--------------------------
+Enable display of X-Label:
+--------------------------
 
 ```
 set index_format="%4C %Z %{%b %d} %-15.15L %?M?(#%03M)&(%4l)? %?y?(%.20Y) ?%s"
@@ -60,6 +60,4 @@ Trying it out:
 In mutt you can now hit \<esc\>w to mark an email with tag "waiting" and unmark it by hitting \<esc\>w again. To limit your view to emails with tag "waiting" just hit \<ctrl\>w.
 
 
-Happy tagging in mutt
-
-Christoph
+Happy tagging
