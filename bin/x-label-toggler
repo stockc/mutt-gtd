@@ -1,0 +1,30 @@
+#!/bin/bash
+
+#
+#https://github.com/stockc/mutt-gtd
+#
+# $1 is the comman (review, todo, waiting, urgent)
+# $2 is the filename
+
+COMMAND="$1"
+FNAME="$2"
+NFNAME="/tmp/x-label-toggler-`basename "$2"`.$$"
+
+OLDXLABEL=`formail -c -X X-Label < "$FNAME"`
+
+if [ "$OLDXLABEL" == "" ]; then
+  OLDXLABEL="X-Label: "
+fi
+
+if [[ $OLDXLABEL =~ $COMMAND ]]; then
+  NEWXLABEL=`echo $OLDXLABEL | sed "s/$COMMAND//"`
+  formail -I "$NEWXLABEL" < "$FNAME" > "$NFNAME"
+else
+  NEWXLABEL=$OLDXLABEL$COMMAND
+  formail -I "$NEWXLABEL" < "$FNAME" > "$NFNAME"
+fi
+
+# if we created a new file, step over the old one
+if [ -f "$NFNAME" ]; then
+	mv "$NFNAME" "$FNAME"
+fi
