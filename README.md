@@ -56,7 +56,7 @@ set index_format="%4C %Z %{%b %d} %-15.15L %?M?(#%03M)&(%4l)? %?y?(%.20Y) ?%s"
 Trying it out:
 --------------
 
-In mutt you can now hit <esc>w to mark an email with tag "waiting" and unmark it by hitting <ecs>w again. To limit your view to emails with tag "waiting" just hit <ctrl>w.
+In mutt you can now hit \<esc\>w to mark an email with tag "waiting" and unmark it by hitting \<esc\>w again. To limit your view to emails with tag "waiting" just hit \<ctrl\>w.
 
 Happy tagging in mutt
 Christoph
