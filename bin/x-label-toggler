@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #
-#https://github.com/stockc/mutt-gtd
+# https://github.com/stockc/mutt-gtd
 #
-# $1 is the comman (review, todo, waiting, urgent)
-# $2 is the filename
+# $1 is the tag to be toggled (e.g. review, todo, waiting, urgent)
+# $2 is the filename provided by mutt
 
 COMMAND="$1"
 FNAME="$2"
