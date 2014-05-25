@@ -35,6 +35,7 @@ macro index \Cw "<limit>~y waiting\n" "Limit view to tag waiting"
 macro index \Ct "<limit>~y todo\n" "Limit view to tag todo"
 macro index \Cu "<limit>~y urgent\n" "Limit view to tag urgent"
 macro index \Cr "<limit>~y review\n" "Limit view to tag review"
+macro index \Cd "<limit>!(~y review | ~y urgent | ~y waiting | ~y todo)\n" "Limit view to all untagged messages"
 ```
 
 Enable coloring in mutt
