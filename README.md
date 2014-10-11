@@ -6,7 +6,7 @@ Little [mutt](http://www.mutt.org) hack to toggle [gtd](http://de.wikipedia.org/
 Motivation and idea
 -------------------
 
-After reading http://www.nikilster.com/thoughts/how-to-win-at-email/#sthash.PvTgsQ0I.dpbs (via @felixge) I started using http://blitiri.com.ar/p/other/mutt-labels/ but disliked the amount of required keystrokes to actually do the tagging of single emails.
+After reading [this](http://www.nikilster.com/thoughts/how-to-win-at-email/#sthash.PvTgsQ0I.dpbs) (via [@felixge](https://twitter.com/felixge)) I started using [this](http://blitiri.com.ar/p/other/mutt-labels/) but disliked the amount of required keystrokes to actually do the tagging of single emails.
 
 Wouldn't it be easier to simple toggle a fixed set of tags? Currently I only use "urgent", "todo", "review" and "waiting" for my email gtd.
 
