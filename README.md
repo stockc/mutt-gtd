@@ -31,12 +31,11 @@ macro index <esc>u "<enter-command>set editor=\"~/bin/x-label-toggler urgent\"\n
 macro index <esc>r "<enter-command>set editor=\"~/bin/x-label-toggler review\"\n\
 <edit><next-undeleted>\
 <enter-command>set editor=vim\n" "Toggle label"
-macro index \Cw "<limit>~y waiting\n" "Limit view to tag waiting"
-macro index \Ct "<limit>~y todo\n" "Limit view to tag todo"
-macro index \Cu "<limit>~y urgent\n" "Limit view to tag urgent"
-macro index \Cr "<limit>~y review\n" "Limit view to tag review"
-macro index \Cd "<limit>!(~y review | ~y urgent | ~y waiting | ~y todo)\n" "Limit view to all untagged messages"
-```
+macro index \Cw "<limit>(~y waiting|~(~y waiting))!~D<enter>" "Limit view to tag waiting"
+macro index \Ct "<limit>(~y todo|~(~y todo))!~D<enter>" "Limit view to tag todo" 
+macro index \Cu "<limit>(~y urgent|~(~y urgent))!~D<enter>" "Limit view to tag urgent"
+macro index \Cr "<limit>(~y review|~(~y review))!~D<enter>" "Limit view to tag review"
+macro index \Cd "<limit>!(~y review|~(~y review)|~y urgent|~(~y urgent)|~y waiting|~(~y waiting)|~y todo|~(~y todo))!~D<enter>" "Limit view to all untagged messages"
 
 Enable coloring in mutt
 -----------------------
@@ -58,7 +57,7 @@ set index_format="%4C %Z %{%b %d} %-15.15L %?M?(#%03M)&(%4l)? %?y?(%.20Y) ?%s"
 How to use it
 -------------
 
-In mutt you hit \<esc\>w to mark an email with the tag "waiting" and unmark it by hitting \<esc\>w again. To limit your view to emails with tag "waiting" just hit \<ctrl\>w. Use u for "urgent", t for "todo" and r for "review".
+In mutt you hit \<esc\>w to mark an email with the tag "waiting" and unmark it by hitting \<esc\>w again. To limit your view to emails with tag "waiting" just hit \<ctrl\>w. Use u for "urgent", t for "todo" and r for "review". With \<ctrl\>d you limit your view to all email threads that have no tags assigned.
 
 
 Happy tagging
