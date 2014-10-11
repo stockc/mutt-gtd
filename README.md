@@ -36,6 +36,7 @@ macro index \Ct "<limit>(~y todo|~(~y todo))!~D<enter>" "Limit view to tag todo"
 macro index \Cu "<limit>(~y urgent|~(~y urgent))!~D<enter>" "Limit view to tag urgent"
 macro index \Cr "<limit>(~y review|~(~y review))!~D<enter>" "Limit view to tag review"
 macro index \Cd "<limit>!(~y review|~(~y review)|~y urgent|~(~y urgent)|~y waiting|~(~y waiting)|~y todo|~(~y todo))!~D<enter>" "Limit view to all untagged messages"
+```
 
 Enable coloring in mutt
 -----------------------
