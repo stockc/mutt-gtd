@@ -19,10 +19,10 @@ Map the keystrokes to the toggling script
 -----------------------------------------
 
 ```
-macro index <esc>w "<enter-command> set my_editor=\$editor<enter><enter-command> set editor=\"~/bin/x-label-toggler waiting\"<enter><edit><enter-command> set editor=\$my_editor<enter><next-undeleted><next-undeleted>" "Toggle label waiting"
-macro index <esc>t "<enter-command> set my_editor=\$editor<enter><enter-command> set editor=\"~/bin/x-label-toggler todo\"<enter><edit><enter-command> set editor=\$my_editor<enter><next-undeleted><next-undeleted>" "Toggle label todo"
-macro index <esc>u "<enter-command> set my_editor=\$editor<enter><enter-command> set editor=\"~/bin/x-label-toggler urgent\"<enter><edit><enter-command> set editor=\$my_editor<enter><next-undeleted><next-undeleted>" "Toggle label urgent"
-macro index <esc>r "<enter-command> set my_editor=\$editor<enter><enter-command> set editor=\"~/bin/x-label-toggler review\"<enter><edit><enter-command> set editor=\$my_editor<enter><next-undeleted><next-undeleted>" "Toggle label review"
+macro index <esc>w "<enter-command> set my_editor=\$editor<enter><enter-command> set editor=\"~/bin/x-label-toggler waiting\"<enter><edit><enter-command> set editor=\$my_editor<enter><clear-flag>N<enter><next-undeleted>" "Toggle label waiting"
+macro index <esc>t "<enter-command> set my_editor=\$editor<enter><enter-command> set editor=\"~/bin/x-label-toggler todo\"<enter><edit><enter-command> set editor=\$my_editor<enter><clear-flag>N<enter><next-undeleted>" "Toggle label todo"
+macro index <esc>u "<enter-command> set my_editor=\$editor<enter><enter-command> set editor=\"~/bin/x-label-toggler urgent\"<enter><edit><enter-command> set editor=\$my_editor<enter><clear-flag>N<enter><next-undeleted>" "Toggle label urgent"
+macro index <esc>r "<enter-command> set my_editor=\$editor<enter><enter-command> set editor=\"~/bin/x-label-toggler review\"<enter><edit><enter-command> set editor=\$my_editor<enter><clear-flag>N<enter><next-undeleted>" "Toggle label review"
 
 macro index \Cw "<limit>(~y waiting|~(~y waiting))!~D<enter>" "Limit view to tag waiting"
 macro index \Ct "<limit>(~y todo|~(~y todo))!~D<enter>" "Limit view to tag todo"
