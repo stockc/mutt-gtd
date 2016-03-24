@@ -13,7 +13,7 @@ Wouldn't it be easier to simple toggle a fixed set of tags? Currently I only use
 Here is the result
 ------------------
 
-Put the script x-label-toggler in your `~/bin` directory and modify `~/.muttrc` in the follwing way. (Note: If you place it into another directory than `~/bin`, modify the folling configuration accordingly)
+Put the script x-label-toggler in your `~/bin` directory and modify `~/.muttrc` in the following way. (Note: If you place it into another directory than `~/bin`, modify the following configuration accordingly)
 
 Map the keystrokes to the toggling script
 -----------------------------------------
