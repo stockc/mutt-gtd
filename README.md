@@ -24,10 +24,10 @@ macro index <esc>t "<enter-command> set my_editor=\$editor<enter><enter-command>
 macro index <esc>u "<enter-command> set my_editor=\$editor<enter><enter-command> set editor=\"~/bin/x-label-toggler urgent\"<enter><edit><enter-command> set editor=\$my_editor<enter><clear-flag>N<enter><next-undeleted>" "Toggle label urgent"
 macro index <esc>r "<enter-command> set my_editor=\$editor<enter><enter-command> set editor=\"~/bin/x-label-toggler review\"<enter><edit><enter-command> set editor=\$my_editor<enter><clear-flag>N<enter><next-undeleted>" "Toggle label review"
 
-macro index \Cw "<limit>(~y waiting|~(~y waiting))!~D<enter>" "Limit view to tag waiting"
-macro index \Ct "<limit>(~y todo|~(~y todo))!~D<enter>" "Limit view to tag todo"
-macro index \Cu "<limit>(~y urgent|~(~y urgent))!~D<enter>" "Limit view to tag urgent"
-macro index \Cr "<limit>(~y review|~(~y review))!~D<enter>" "Limit view to tag review"
+macro index \Cw "<limit>(~y waiting|~(~y waiting)|~N)!~D<enter>" "Limit view to tag waiting"
+macro index \Ct "<limit>(~y todo|~(~y todo)|~N)!~D<enter>" "Limit view to tag todo"
+macro index \Cu "<limit>(~y urgent|~(~y urgent)|~N)!~D<enter>" "Limit view to tag urgent"
+macro index \Cr "<limit>(~y review|~(~y review)|~N)!~D<enter>" "Limit view to tag review"
 macro index \Cd "<limit>!(~y review|~(~y review)|~y urgent|~(~y urgent)|~y waiting|~(~y waiting)|~y todo|~(~y todo))!~D<enter>" "Limit view to all untagged messages"
 ```
 
